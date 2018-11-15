@@ -1,11 +1,11 @@
 let h1 = React.createElement('h1',null,'Hello World');
 class HelloWorld extends React.Component {
     render(){
-        return React.createElement('div',null,h1,h1);
+        console.log('isFrozen: ', Object.isFrozen(this.props));
+        return React.createElement('div',null,h1);
     }
 }
 ReactDOM.render(
-    //React.createElement(HelloWorld,null),
     React.createElement('div'
         ,null
         ,React.createElement(HelloWorld)
