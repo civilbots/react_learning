@@ -11,12 +11,14 @@ class Clock extends React.Component{
     }
     launchClock(){
         setInterval(() => {
+            console.log('updating time ...')
             this.setState({
                 currentTime: this.getCurrentTime()
             })
         },1000)
     }
     render(){
+       console.log('rendering clock ...');
         return (
             <div>{this.state.currentTime}</div>
         );
